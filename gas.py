@@ -35,4 +35,4 @@ def gas():
   n = text_file.write(gasdata)
   text_file.close()
 
-  return None
+  return gasdata
