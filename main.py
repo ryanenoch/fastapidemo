@@ -3,9 +3,9 @@ from gas import gas
 
 app = FastAPI()
 
-gas(gasdata)
+price = gas()
 
 @app.get("/")
 async def root():
     return {"Message": "Congrats! This is your first API!"}
-    return gasdata
+    return price
