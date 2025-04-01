@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from gas import gas
 
 app = FastAPI()
 
