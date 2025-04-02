@@ -19,7 +19,7 @@ def gas():
   #add commas bw cells in a CSV
   headings = {'Station','Address','City'}
   cities = {'Echo Bay','Sault Ste Marie','Bruce Mines','Thessalon','Desbarats'}
-  stations = {'Heyden Fuels','Esso',"Mac's",'Circle K',"Canadian Tire","Shell",'Petro-Canada','Flying J','Pit Stop','Tunnel Lake Trading Post'}
+  stations = {'Heyden Fuels','Esso',"Mac's",'Circle K',"Canadian Tire","Shell",'Petro-Canada','Flying J','Pit Stop','Tunnel Lake Trading Post','Airways General Store'}
 
   for heading in headings:
     gasdata = gasdata.replace(f"{heading}",f",{heading}")
@@ -30,6 +30,8 @@ def gas():
 
   gasdata = gasdata.replace("Thessalon ,Esso","Thessalon Esso")
 
+  print(gasdata)
+  
   #Copies Gas Station Data to CSV
   text_file = open("ssmgas.csv", "w")
   n = text_file.write(gasdata)
