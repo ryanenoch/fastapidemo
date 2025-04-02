@@ -2,8 +2,10 @@ def gas():
   from selenium import webdriver
   from selenium.webdriver.chrome.options import Options
   from selenium.webdriver.common.by import By 
-
+  import os
+  
   options = Options()
+  chrome_options.set_capability('browserless:token', os.environ['BROWSER_TOKEN'])
   options.add_argument("--headless=new") #Headless = No GUI
   options.add_argument("--disable-extensions")
   options.add_argument("--disable-gpu")
