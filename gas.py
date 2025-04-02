@@ -10,7 +10,7 @@ def gas():
   options.add_argument("--disable-extensions")
   options.add_argument("--disable-gpu")
 
-  driver = webdriver.Chrome(options=options)
+  driver = webdriver.Remote(os.environ['BROWSER_WEBDRIVER_ENDPOINT'],options=options)
   driver.get("https://www.sootoday.com/gas-prices")
 
   items = driver.find_element(By.TAG_NAME, "table")
