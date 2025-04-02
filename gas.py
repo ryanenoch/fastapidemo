@@ -5,7 +5,7 @@ def gas():
   import os
   
   options = Options()
-  chrome_options.set_capability('browserless:token', os.environ['BROWSER_TOKEN'])
+  options.set_capability('browserless:token', os.environ['BROWSER_TOKEN'])
   options.add_argument("--headless=new") #Headless = No GUI
   options.add_argument("--disable-extensions")
   options.add_argument("--disable-gpu")
